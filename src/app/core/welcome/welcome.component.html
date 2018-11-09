@@ -1,0 +1,139 @@
+<div class="row">
+
+
+  <div class="col-md-5 order-md-2 mb-4">
+    <h4 class="d-flex justify-content-between align-items-center mb-3">
+      <span class="text-muted">KẾT QUẢ</span>
+    </h4>
+    <ul class="list-group mb-3">
+      <li class="list-group-item d-flex justify-content-between lh-condensed">
+        <div class="row">
+          <div class="col col-md-12">
+            <div class="alert alert-danger">Email vừa nhập <strong>tồn tại</strong> trong cơ sở dữ liệu! <br><a href="#/breach/#email"
+                class="">Tôi phải làm gì trong trường hợp này?</a></div>
+          </div>
+
+          <div class="col col-md-12">
+            <h5>Kết quả</h5>
+            <table class="table table-responsive">
+              <thead>
+                <tr>
+                  <th>Email</th>
+                  <th>Kết quả</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>zzzzstavros@hotmail.com</td>
+                  <td><strong>Tồn tại</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between lh-condensed">
+        <div class="row">
+          <div class="col col-md-12">
+            <div class="alert alert-danger">Số thẻ vừa nhập <strong>tồn tại</strong> trong cơ sở dữ liệu! <a href="#/breach/#transaction"
+                class="">Tôi phải làm gì trong trường hợp này?</a></div>
+          </div>
+          <div class="col col-md-12">
+            <h5>Danh sách giao dịch</h5>
+            <table class="table table-responsive">
+              <thead>
+                <tr>
+                  <th>Ngày</th>
+                  <th>Loại thẻ</th>
+                  <th>Số tiền</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>09/07/2016</td>
+                  <td>VISA</td>
+                  <td>VND 628,000</td>
+                </tr>
+                <tr>
+                  <td>18/07/2016</td>
+                  <td>VISA</td>
+                  <td>VND 2,200,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+
+
+  <div class="col-md-7 order-md-1">
+    <h4 class="mb-3">Hòm thư điện tử</h4>
+    <form class="needs-validation" novalidate="">
+
+      <div class="mb-3">
+        <label for="username">Địa chỉ email</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">@</span>
+          </div>
+          <input type="text" class="form-control" id="username" placeholder="Username" required="">
+          <div class="invalid-feedback" style="width: 100%;">
+            Your username is required.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="same-address">
+          <label class="custom-control-label" for="same-address">Kiểm tra các giao dịch qua email</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="save-info">
+          <label class="custom-control-label" for="save-info">Kiểm tra lộ mật khẩu</label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-primary" type="submit">Kiểm tra</button>
+      </div>
+
+      <div class="row">
+          <div class="col col-md-12">
+            <div class="alert alert-success">Email vừa nhập <strong>không tồn tại</strong> trong cơ sở dữ liệu.</div>
+          </div>
+        </div>
+  
+
+
+      <hr class="mb-4">
+
+      <h4 class="mb-3">Thông tin giao dịch</h4>
+      <p>Chúng tôi chỉ sử dụng sáu chữ số đầu và bốn chữ số cuối của thẻ cho mục đích tra cứu. Chúng tôi không sử dụng
+        số thẻ đầy
+        đủ và các thông tin khác trên thẻ trong quá trình này. Chúng tôi cam kết không lưu trữ bất kỳ thông tin nào của
+        người dùng trên trang.</p>
+
+      <div class="mb-3">
+        <label for="cc-name">Số Thẻ</label>
+        <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+        <small class="text-muted">Vui lòng nhập 6 chữ số đầu và 4 chữ số cuối</small>
+        <div class="invalid-feedback">
+          Name on card is required
+        </div>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-primary" type="submit">Kiểm tra</button>
+      </div>
+
+      <div class="row">
+        <div class="col col-md-12">
+          <div class="alert alert-success">Số thẻ vừa nhập <strong>không tồn tại</strong> trong cơ sở dữ liệu.</div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
