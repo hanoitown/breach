@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
+import { DbService } from './services/db.service';
 
 @NgModule({
   declarations: [NewsComponent, MenuComponent, FooterComponent, ShellComponent, WelcomeComponent, AboutComponent],
@@ -18,7 +19,10 @@ import { AboutComponent } from './about/about.component';
     RouterModule,
     NgbModule
   ],
-  exports:[
+  providers: [
+    DbService
+  ],
+  exports: [
     NgbModule
   ]
 })
