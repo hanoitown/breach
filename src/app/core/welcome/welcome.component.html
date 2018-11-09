@@ -101,11 +101,11 @@
       </div>
 
       <div class="row">
-          <div class="col col-md-12">
-            <div class="alert alert-success">Email vừa nhập <strong>không tồn tại</strong> trong cơ sở dữ liệu.</div>
-          </div>
+        <div class="col col-md-12">
+          <div class="alert alert-success">Email vừa nhập <strong>không tồn tại</strong> trong cơ sở dữ liệu.</div>
         </div>
-  
+      </div>
+
 
 
       <hr class="mb-4">
@@ -125,15 +125,62 @@
         </div>
       </div>
       <div class="mb-3">
-        <button class="btn btn-primary" type="submit">Kiểm tra</button>
+        <button class="btn btn-primary" type="submit" (click)="openVerticallyCentered(content)">Kiểm tra</button>
       </div>
 
-      <div class="row">
-        <div class="col col-md-12">
-          <div class="alert alert-success">Số thẻ vừa nhập <strong>không tồn tại</strong> trong cơ sở dữ liệu.</div>
-        </div>
-      </div>
 
     </form>
   </div>
 </div>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+    <div class="row">
+      <div class="col col-md-12">
+        <div class="alert alert-success">Số thẻ vừa nhập <strong>không tồn tại</strong> trong cơ sở dữ liệu.</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-md-12">
+        <div class="alert alert-danger">Số thẻ vừa nhập <strong>tồn tại</strong> trong cơ sở dữ liệu! <a href="#/breach/#transaction"
+            class="">Tôi phải làm gì trong trường hợp này?</a></div>
+      </div>
+      <div class="col col-md-12">
+        <h5>Danh sách giao dịch</h5>
+        <table class="table table-responsive">
+          <thead>
+            <tr>
+              <th>Ngày</th>
+              <th>Loại thẻ</th>
+              <th>Số tiền</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>09/07/2016</td>
+              <td>VISA</td>
+              <td>VND 628,000</td>
+            </tr>
+            <tr>
+              <td>18/07/2016</td>
+              <td>VISA</td>
+              <td>VND 2,200,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>

@@ -2,13 +2,17 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ShellComponent } from './core/shell/shell.component';
 import { WelcomeComponent } from './core/welcome/welcome.component';
+import { NewsComponent } from './core/news/news.component';
+import { AboutComponent } from './core/about/about.component';
 
 const routes: Routes =[
   {
     path: "",
     component: ShellComponent,
     children: [
-      { path: "welcome", component: WelcomeComponent },
+      { path: "check", component: WelcomeComponent },
+      { path: "news", component: NewsComponent },
+      { path: "about", component: AboutComponent },
       // {
       //   path: "application",
       //   loadChildren: "./application/application.module#ApplicationModule"
@@ -17,7 +21,7 @@ const routes: Routes =[
       //   path: "profile",
       //   loadChildren: "./profile/profile.module#ProfileModule"
       // },
-      { path: "", redirectTo: "welcome", pathMatch: "full" }
+      { path: "", redirectTo: "check", pathMatch: "full" }
     ]
   },
   // { path: "**", component: PageNotFoundComponent }
