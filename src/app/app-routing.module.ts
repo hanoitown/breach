@@ -5,12 +5,12 @@ import { WelcomeComponent } from './core/welcome/welcome.component';
 import { NewsComponent } from './core/news/news.component';
 import { AboutComponent } from './core/about/about.component';
 
-const routes: Routes =[
+const routes: Routes = [
   {
     path: "",
     component: ShellComponent,
     children: [
-      { path: "check", component: WelcomeComponent },
+      { path: "secure", component: WelcomeComponent },
       { path: "news", component: NewsComponent },
       { path: "about", component: AboutComponent },
       // {
@@ -21,7 +21,7 @@ const routes: Routes =[
       //   path: "profile",
       //   loadChildren: "./profile/profile.module#ProfileModule"
       // },
-      { path: "", redirectTo: "check", pathMatch: "full" }
+      { path: "", redirectTo: "secure", pathMatch: "full" }
     ]
   },
   // { path: "**", component: PageNotFoundComponent }

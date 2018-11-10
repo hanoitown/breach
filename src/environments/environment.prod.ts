@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://breach.annhome.vn/api/cards'
+  apiUrl: 'http://breach.annhome.vn/api/cards'
 };

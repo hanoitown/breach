@@ -21,7 +21,7 @@ export class WelcomeComponent implements OnInit {
 
   ngOnInit() {
     this.frmTransaction = this.fb.group({
-      cardNumber: ""
+      sothe: ""
     });
 
     this.frmEmail = this.fb.group({
@@ -30,7 +30,7 @@ export class WelcomeComponent implements OnInit {
   }
 
   openCheckTransactionResult(content) {
-    this.db.checkCard(this.frmTransaction.value.cardNumber).subscribe(res => {
+    this.db.checkCard(this.frmTransaction.value.sothe).subscribe(res => {
       this.transactions = res;
     });
 

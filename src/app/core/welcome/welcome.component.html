@@ -1,7 +1,10 @@
 <div class="pricing-header text-center">
   <!-- <h2 class="display-4">Kiểm tra</h2> -->
-  <p class="lead">Kiểm tra thẻ hoặc địa chỉ email trong 31.000 giao dịch thẻ ngân
-    hàng và 5.400.000 email tại Việt Nam bị phát tán lên mạng. Tìm hiểu thêm về sự cố này tại đây. </p>
+  <p class="lead">Kiểm tra thẻ hoặc địa chỉ email trong <strong>
+      31.000 giao dịch thẻ ngân
+      hàng
+      và 5.400.000 email </strong> tại Việt Nam bị phát tán lên mạng. Tìm hiểu thêm về sự cố này <a [routerLink]="['/news']">tại
+      đây</a> . </p>
 </div>
 
 <div class="row">
@@ -51,8 +54,9 @@
       người dùng trên trang.</p>
 
     <div class="mb-3">
-      <label for="cardNumber">Số Thẻ</label>
-      <input type="text" class="form-control" id="cardNumber" appPhoneMask formControlName="cardNumber" placeholder="1234-56**-****-7890" required>
+      <label for="sothe">Số Thẻ</label>
+      <input type="text" class="form-control" id="sothe" appPhoneMask formControlName="sothe" placeholder="1234-56**-****-7890"
+        required>
       <small class="text-muted">Vui lòng nhập 6 chữ số đầu và 4 chữ số cuối</small>
       <div class="invalid-feedback">
         Name on card is required
